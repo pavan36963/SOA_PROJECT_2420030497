@@ -1,0 +1,80 @@
+{
+  "info": {
+    "name": "Food Waste Management API",
+    "_postman_id": "9e0a2fd4-6d8c-4e47-8b9d-4ad2b7f04010",
+    "description": "Requests for testing the Food Waste Management Spring Boot API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create food record",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"locationName\": \"College Canteen\",\n  \"foodName\": \"Rice\",\n  \"preparedQuantityKg\": 100,\n  \"consumedQuantityKg\": 80\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/foods",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "foods"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get all food records",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/foods",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "foods"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Overall waste summary",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/reports/summary",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "reports",
+            "summary"
+          ]
+        }
+      }
+    }
+  ]
+}
